@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/component.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div>
+				{{title}}
+			</div>
+			<div v-bind:title="message">鼠标悬停几秒钟查看此处动态绑定的提示信息！</div>
+			<div v-if="seen">你可以看到我了</div>
+			<tools></tools>
+		</div>
+		<script>
+			var app = new Vue({
+				el: '#app',
+				data: {
+					title: '标题',
+					message: '显示标题：' + new Date().toLocaleString(), //toLocaleString:根据本地时间把 Date 对象转换为字符串
+					seen:false,
+				}
+			})
+			app.title = "新的标题";//修改title的值
+			app.seen =false;//隐藏文字
+		</script>
+	</body>
+</html>
