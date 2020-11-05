@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<script>
+    // axios默认请求方式
+    axios({
+        url: '',
+    }).then(res => {
+        console.log(res, 'res')
+    })
+    // axios 指定请求方式的五参数请求
+    axios({
+        url: '',
+        method: 'get' //get/post/delete
+    }).then(res => {
+        console.log(res, 'res')
+    })
+    //axios get带参数请求
+    axios({
+        url: '',
+        method: 'get' //get/post/delete
+    }).then(res => {
+        console.log(res, 'res')
+    })
+</script>
+</body>
+</html>
